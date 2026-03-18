@@ -1,4 +1,4 @@
-# Python API Automation Framework
+# API-Test-Automation-Framework-for-RESTful-Services
 
 This is an industry-level API automation framework built using Python, Pytest, and Requests.
 ## 🚀 Key Features
