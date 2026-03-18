@@ -1,0 +1,88 @@
+2026-03-11 18:36:19,186 - API_Framework - INFO - Sending POST request to https://restful-booker.herokuapp.com/booking
+2026-03-11 18:36:19,195 - API_Framework - DEBUG - Request Body: {
+  "firstname": "John",
+  "lastname": "Wick",
+  "totalprice": 100,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2024-01-01",
+    "checkout": "2024-01-10"
+  },
+  "additionalneeds": "Breakfast"
+}
+2026-03-11 18:36:20,441 - API_Framework - INFO - Response Status Code: 200
+2026-03-11 18:36:20,442 - API_Framework - DEBUG - Response Body: {
+  "bookingid": 2782,
+  "booking": {
+    "firstname": "John",
+    "lastname": "Wick",
+    "totalprice": 100,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2024-01-01",
+      "checkout": "2024-01-10"
+    },
+    "additionalneeds": "Breakfast"
+  }
+}
+2026-03-11 18:36:20,442 - API_Framework - INFO - Asserting status code: Expected 200, Got 200
+2026-03-11 18:36:20,442 - API_Framework - INFO - Asserting key 'bookingid' in response
+2026-03-11 18:36:20,443 - API_Framework - INFO - Validating schema against BookingResponse
+2026-03-11 18:36:20,450 - API_Framework - INFO - Sending GET request to https://restful-booker.herokuapp.com/booking/2782
+2026-03-11 18:36:20,685 - API_Framework - INFO - Response Status Code: 200
+2026-03-11 18:36:20,686 - API_Framework - DEBUG - Response Body: {
+  "firstname": "John",
+  "lastname": "Wick",
+  "totalprice": 100,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2024-01-01",
+    "checkout": "2024-01-10"
+  },
+  "additionalneeds": "Breakfast"
+}
+2026-03-11 18:36:20,686 - API_Framework - INFO - Asserting status code: Expected 200, Got 200
+2026-03-11 18:36:20,686 - API_Framework - INFO - Validating schema against BookingModel
+2026-03-11 18:36:20,691 - API_Framework - INFO - Generating auth token for the test session
+2026-03-11 18:36:20,691 - API_Framework - INFO - Sending POST request to https://restful-booker.herokuapp.com/auth
+2026-03-11 18:36:20,691 - API_Framework - DEBUG - Request Body: {
+  "username": "admin",
+  "password": "password123"
+}
+2026-03-11 18:36:20,922 - API_Framework - INFO - Response Status Code: 200
+2026-03-11 18:36:20,924 - API_Framework - DEBUG - Response Body: {
+  "token": "2adfffa94f725f7"
+}
+2026-03-11 18:36:20,925 - API_Framework - INFO - Sending PUT request to https://restful-booker.herokuapp.com/booking/2782
+2026-03-11 18:36:20,926 - API_Framework - DEBUG - Request Body: {
+  "firstname": "John",
+  "lastname": "Wick",
+  "totalprice": 150,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2024-02-01",
+    "checkout": "2024-02-05"
+  },
+  "additionalneeds": "Dinner"
+}
+2026-03-11 18:36:21,159 - API_Framework - INFO - Response Status Code: 200
+2026-03-11 18:36:21,160 - API_Framework - DEBUG - Response Body: {
+  "firstname": "John",
+  "lastname": "Wick",
+  "totalprice": 150,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2024-02-01",
+    "checkout": "2024-02-05"
+  },
+  "additionalneeds": "Dinner"
+}
+2026-03-11 18:36:21,160 - API_Framework - INFO - Asserting status code: Expected 200, Got 200
+2026-03-11 18:36:21,164 - API_Framework - INFO - Sending DELETE request to https://restful-booker.herokuapp.com/booking/2782
+2026-03-11 18:36:21,398 - API_Framework - INFO - Response Status Code: 201
+2026-03-11 18:36:21,399 - API_Framework - DEBUG - Response Body (text): Created
+2026-03-11 18:36:21,399 - API_Framework - INFO - Asserting status code: Expected 201, Got 201
+2026-03-11 18:36:21,399 - API_Framework - INFO - Sending GET request to https://restful-booker.herokuapp.com/booking/2782
+2026-03-11 18:36:21,634 - API_Framework - INFO - Response Status Code: 404
+2026-03-11 18:36:21,634 - API_Framework - DEBUG - Response Body (text): Not Found
+2026-03-11 18:36:21,634 - API_Framework - INFO - Asserting status code: Expected 404, Got 404

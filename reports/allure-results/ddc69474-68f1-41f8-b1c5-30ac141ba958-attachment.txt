@@ -1,0 +1,35 @@
+[32mINFO    [0m API_Framework:conftest.py:16 Generating auth token for the test session
+[32mINFO    [0m API_Framework:rest_client.py:36 Sending POST request to https://restful-booker.herokuapp.com/auth
+[35mDEBUG   [0m API_Framework:rest_client.py:38 Request Body: {
+  "username": "admin",
+  "password": "password123"
+}
+[32mINFO    [0m API_Framework:rest_client.py:69 Response Status Code: 200
+[35mDEBUG   [0m API_Framework:rest_client.py:72 Response Body: {
+  "token": "9f237bb02d4b119"
+}
+[32mINFO    [0m API_Framework:rest_client.py:36 Sending PUT request to https://restful-booker.herokuapp.com/booking/3514
+[35mDEBUG   [0m API_Framework:rest_client.py:38 Request Body: {
+  "firstname": "John",
+  "lastname": "Wick",
+  "totalprice": 150,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2024-02-01",
+    "checkout": "2024-02-05"
+  },
+  "additionalneeds": "Dinner"
+}
+[32mINFO    [0m API_Framework:rest_client.py:69 Response Status Code: 200
+[35mDEBUG   [0m API_Framework:rest_client.py:72 Response Body: {
+  "firstname": "John",
+  "lastname": "Wick",
+  "totalprice": 150,
+  "depositpaid": false,
+  "bookingdates": {
+    "checkin": "2024-02-01",
+    "checkout": "2024-02-05"
+  },
+  "additionalneeds": "Dinner"
+}
+[32mINFO    [0m API_Framework:assertions.py:7 Asserting status code: Expected 200, Got 200

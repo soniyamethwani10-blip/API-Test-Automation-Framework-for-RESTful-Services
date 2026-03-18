@@ -1,0 +1,8 @@
+[32mINFO    [0m API_Framework:rest_client.py:36 Sending DELETE request to https://restful-booker.herokuapp.com/booking/3514
+[32mINFO    [0m API_Framework:rest_client.py:69 Response Status Code: 201
+[35mDEBUG   [0m API_Framework:rest_client.py:74 Response Body (text): Created
+[32mINFO    [0m API_Framework:assertions.py:7 Asserting status code: Expected 201, Got 201
+[32mINFO    [0m API_Framework:rest_client.py:36 Sending GET request to https://restful-booker.herokuapp.com/booking/3514
+[32mINFO    [0m API_Framework:rest_client.py:69 Response Status Code: 404
+[35mDEBUG   [0m API_Framework:rest_client.py:74 Response Body (text): Not Found
+[32mINFO    [0m API_Framework:assertions.py:7 Asserting status code: Expected 404, Got 404
